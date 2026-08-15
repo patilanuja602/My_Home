@@ -92,3 +92,27 @@ img {
     padding: 0 32px;
   }
 }
+
+/* Universal Card Gold Corner Brackets */
+.corner-bracket {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid var(--gold-accent);
+  pointer-events: none;
+  z-index: 5;
+}
+
+.corner-bracket--tl {
+  top: 5px;
+  left: 5px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.corner-bracket--br {
+  bottom: 5px;
+  right: 5px;
+  border-left: none;
+  border-top: none;
+}

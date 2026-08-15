@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import houseImg from "../assets/house.jpg";
+import familyImg from "../assets/family.jpg";
 import {
   GaneshaMark,
   EucalyptusSprays,
@@ -75,18 +75,23 @@ export default function DigitalCard() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.15 }}
         >
-          {/* STEP 1: Crisp Clear House Artwork Centerpiece (Appears First, Slower & Majestic) */}
+          {/* STEP 1: Crisp Family Portrait Centerpiece (Appears First, Slower & Majestic) */}
           <motion.div
             className="invitation-house-showcase"
             variants={houseArtVariant}
             whileHover={{ scale: 1.02, transition: { duration: 0.4 } }}
           >
             <div className="invitation-house-frame">
-              <img
-                src={houseImg}
-                alt="Suvarna Nivasa Watercolor Illustration"
-                className="invitation-house-img"
-              />
+              <div className="invitation-family-matting">
+                <img
+                  src={familyImg}
+                  alt="The Family - Suvarna Nivasa"
+                  className="invitation-house-img"
+                />
+              </div>
+              {/* Corner Gold Accent Brackets */}
+              <span className="corner-bracket corner-bracket--tl" />
+              <span className="corner-bracket corner-bracket--br" />
             </div>
           </motion.div>
 
@@ -95,9 +100,9 @@ export default function DigitalCard() {
             <GaneshaMark className="invitation-ganesha-svg" />
           </motion.div>
 
-          {/* STEP 3: Sub-heading */}
+          {/* STEP 3: Heartfelt Welcome Sentence from First Page */}
           <motion.p variants={itemFadeUp} className="invitation-lead-text">
-            You are cordially invited to our
+            With open hearts &amp; joyful smiles, we warmly welcome you to bless our new home.
           </motion.p>
 
           {/* STEP 4: Title: HOUSE Warming CEREMONY */}

@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import houseImg from "../assets/house.jpg";
-import familyImg from "../assets/family.jpg";
 import { GaneshaMark, CardFloralDivider } from "./Ornaments";
 import "./Hero.css";
 
@@ -58,7 +57,7 @@ export default function Hero({ isTriggered = false }) {
           }
           transition={{
             duration: 1.5,
-            delay: 0.8, // Brisk & snappy timing
+            delay: 0.8,
             ease: [0.4, 0, 0.2, 1],
           }}
         />
@@ -129,7 +128,7 @@ export default function Hero({ isTriggered = false }) {
           </motion.h1>
         </div>
 
-        {/* Centerpiece: Family Photo (No names below it on 1st page) */}
+        {/* Centerpiece: Crisp Home Photo in Elegant Card Frame */}
         <motion.div
           className="aesthetic-cover__centerpiece"
           initial={{ opacity: 0, scale: 0.88, y: 20 }}
@@ -140,18 +139,14 @@ export default function Hero({ isTriggered = false }) {
           <div className="family-card-frame">
             <div className="family-card-matting">
               <img
-                src={familyImg}
-                alt="The host family of Suvarna Nivasa"
+                src={houseImg}
+                alt="Suvarna Nivasa - Our New Home"
                 className="family-card-img"
               />
             </div>
             {/* Corner Gold Accent Brackets */}
             <span className="corner-bracket corner-bracket--tl" />
             <span className="corner-bracket corner-bracket--br" />
-
-            <div className="family-card-badge">
-              <span>The Family</span>
-            </div>
           </div>
         </motion.div>
 
@@ -162,11 +157,6 @@ export default function Hero({ isTriggered = false }) {
           animate={isTriggered ? { opacity: 1, y: 0 } : { opacity: 0 }}
           transition={{ duration: 0.7, delay: 3.3, ease: [0.22, 1, 0.36, 1] }}
         >
-          {/* Heartfelt Welcome Sentence */}
-          <p className="cover-heartfelt-welcome">
-            With open hearts &amp; joyful smiles, we warmly welcome you to bless our new home.
-          </p>
-
           {/* Live Countdown Pill */}
           <div className="aesthetic-countdown">
             <div className="countdown-item">
