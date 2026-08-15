@@ -18,7 +18,7 @@
 .card-intro__bg {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 50% 50%, rgba(197, 160, 89, 0.08) 0%, transparent 60%);
+  background: radial-gradient(circle at 50% 50%, rgba(197, 160, 89, 0.1) 0%, transparent 60%);
   pointer-events: none;
 }
 
@@ -27,7 +27,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
   text-align: center;
   z-index: 10;
   width: 100%;
@@ -35,54 +35,57 @@
 }
 
 .card-intro__ganesha {
-  width: clamp(30px, 8vw, 40px);
-  height: clamp(36px, 9.5vw, 46px);
+  width: clamp(32px, 8.5vw, 44px);
+  height: clamp(38px, 10vw, 50px);
   margin-bottom: 2px;
 }
 
-.card-intro__lead {
+.card-intro__shloka {
   font-family: var(--font-serif);
-  font-size: clamp(0.78rem, 2.8vw, 0.95rem);
-  color: var(--ink-secondary);
-  letter-spacing: 0.03em;
+  font-size: clamp(0.78rem, 2.6vw, 0.95rem);
+  letter-spacing: 0.12em;
+  color: var(--gold-dark);
+  font-weight: 600;
+  text-transform: uppercase;
   margin: 0;
 }
 
-.card-intro__title {
+.card-intro__heading {
   display: flex;
-  align-items: baseline;
-  justify-content: center;
-  gap: clamp(4px, 1.8vw, 8px);
-  font-family: var(--font-serif);
-  font-size: clamp(0.74rem, 2.9vw, 1.1rem);
-  letter-spacing: clamp(0.08em, 1.6vw, 0.22em);
-  color: var(--ink-secondary);
-  width: 100%;
-  max-width: 100%;
-  margin: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  margin: 2px 0 4px 0;
 }
 
 .card-intro__script {
   font-family: var(--font-script);
-  font-size: clamp(2.1rem, 8vw, 3.4rem);
+  font-size: clamp(2.4rem, 8.5vw, 3.8rem);
   color: var(--script-terracotta);
-  line-height: 0.85;
+  line-height: 0.9;
   letter-spacing: normal;
-  transform: translateY(2px);
+}
+
+.card-intro__sub {
+  font-family: var(--font-serif);
+  font-size: clamp(0.85rem, 2.8vw, 1.05rem);
+  color: var(--ink-secondary);
+  letter-spacing: 0.04em;
+  font-weight: 400;
 }
 
 .card-intro__divider {
   width: clamp(100px, 28vw, 140px);
-  margin: 3px 0;
+  margin: 4px 0 2px 0;
 }
 
-.card-intro__name {
-  font-family: var(--font-serif);
-  font-size: clamp(1.8rem, 6.8vw, 2.9rem);
-  font-weight: 500;
-  color: var(--sage-title);
-  margin: 0;
-  line-height: 1.1;
+.card-intro__hint {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin: 4px 0 0 0;
 }
 
 .card-intro__loader {
@@ -91,7 +94,7 @@
   background: rgba(197, 160, 89, 0.25);
   border-radius: 2px;
   overflow: hidden;
-  margin-top: 14px;
+  margin-top: 8px;
 }
 
 .card-intro__loader-bar {

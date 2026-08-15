@@ -5,7 +5,7 @@ import "./OpeningSequence.css";
 
 export default function OpeningSequence({ onFinish }) {
   useEffect(() => {
-    // Automatically transition after 2.2 seconds - no clicking required
+    // Automatically transition after 2.2 seconds - zero clicks needed
     const timer = setTimeout(() => {
       onFinish();
     }, 2200);
@@ -17,7 +17,7 @@ export default function OpeningSequence({ onFinish }) {
     <motion.div
       className="card-intro"
       initial={{ opacity: 1 }}
-      exit={{ opacity: 0, scale: 1.03, transition: { duration: 0.9, ease: "easeInOut" } }}
+      exit={{ opacity: 0, scale: 1.03, transition: { duration: 0.85, ease: "easeInOut" } }}
       role="status"
       aria-live="polite"
     >
@@ -31,17 +31,16 @@ export default function OpeningSequence({ onFinish }) {
       >
         <GaneshaMark className="card-intro__ganesha" />
 
-        <p className="card-intro__lead">You are cordially invited to our</p>
+        <p className="card-intro__shloka">॥ Shri Ganeshaya Namaha ॥</p>
 
-        <div className="card-intro__title">
-          <span>HOUSE</span>
-          <span className="card-intro__script">Warming</span>
-          <span>CEREMONY</span>
-        </div>
+        <h2 className="card-intro__heading">
+          <span className="card-intro__script">A Warm Welcome</span>
+          <span className="card-intro__sub">to Our Special Celebration</span>
+        </h2>
 
         <CardFloralDivider className="card-intro__divider" />
 
-        <h1 className="card-intro__name">Suvarna nivasa</h1>
+        <p className="card-intro__hint">Opening Invitation...</p>
 
         <div className="card-intro__loader">
           <motion.div
