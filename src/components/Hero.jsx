@@ -35,7 +35,7 @@ export default function Hero({ isTriggered = false }) {
 
   return (
     <section className="aesthetic-cover" id="cover" aria-label="Suvarna Nivasa Welcome">
-      {/* Background Home Photo: Starts 100% crystal clear ONLY after intro completes, then blurs */}
+      {/* Background Home Photo: Entire house fully visible & scaled, then smoothly blurs */}
       <div className="aesthetic-cover__bg">
         <motion.img
           src={houseImg}
@@ -49,7 +49,7 @@ export default function Hero({ isTriggered = false }) {
             isTriggered
               ? {
                   filter: "blur(3.4px) brightness(0.92) contrast(1.02)",
-                  scale: 1.04,
+                  scale: 1.02,
                 }
               : {
                   filter: "blur(0px) brightness(1) contrast(1)",
@@ -57,8 +57,8 @@ export default function Hero({ isTriggered = false }) {
                 }
           }
           transition={{
-            duration: 2.5,
-            delay: 1.6,
+            duration: 1.5,
+            delay: 0.8, // Brisk & snappy timing
             ease: [0.4, 0, 0.2, 1],
           }}
         />
@@ -68,21 +68,21 @@ export default function Hero({ isTriggered = false }) {
           initial={{ opacity: 0.05 }}
           animate={isTriggered ? { opacity: 1 } : { opacity: 0.05 }}
           transition={{
-            duration: 2.5,
-            delay: 1.6,
+            duration: 1.5,
+            delay: 0.8,
             ease: [0.4, 0, 0.2, 1],
           }}
         />
       </div>
 
       <div className="container aesthetic-cover__content">
-        {/* Top Header: Texts glide in sequentially with smooth moving text animation */}
+        {/* Top Header: Texts glide in smoothly with snappy, engaging pace */}
         <div className="aesthetic-cover__header">
           {/* STEP 1 (Text): Ganesha Mark */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8, y: -12 }}
+            initial={{ opacity: 0, scale: 0.8, y: -10 }}
             animate={isTriggered ? { opacity: 1, scale: 1, y: 0 } : { opacity: 0 }}
-            transition={{ duration: 1.1, delay: 4.4, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.6, delay: 1.8, ease: [0.22, 1, 0.36, 1] }}
           >
             <GaneshaMark className="aesthetic-cover__ganesha" />
           </motion.div>
@@ -90,9 +90,9 @@ export default function Hero({ isTriggered = false }) {
           {/* STEP 2 (Text): Sub-heading */}
           <motion.p
             className="aesthetic-cover__invite-text"
-            initial={{ opacity: 0, y: 14 }}
+            initial={{ opacity: 0, y: 10 }}
             animate={isTriggered ? { opacity: 1, y: 0 } : { opacity: 0 }}
-            transition={{ duration: 1.0, delay: 5.1, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.6, delay: 2.1, ease: [0.22, 1, 0.36, 1] }}
           >
             You are cordially invited to our
           </motion.p>
@@ -100,9 +100,9 @@ export default function Hero({ isTriggered = false }) {
           {/* STEP 3 (Text): Title: HOUSE Warming CEREMONY */}
           <motion.div
             className="aesthetic-cover__title-wrap"
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 0, y: 12 }}
             animate={isTriggered ? { opacity: 1, y: 0 } : { opacity: 0 }}
-            transition={{ duration: 1.2, delay: 5.8, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.7, delay: 2.4, ease: [0.22, 1, 0.36, 1] }}
           >
             <span className="aesthetic-cover__house">HOUSE</span>
             <span className="aesthetic-cover__warming">Warming</span>
@@ -113,7 +113,7 @@ export default function Hero({ isTriggered = false }) {
           <motion.div
             initial={{ opacity: 0, scaleX: 0 }}
             animate={isTriggered ? { opacity: 1, scaleX: 1 } : { opacity: 0 }}
-            transition={{ duration: 1.0, delay: 6.5, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.5, delay: 2.7, ease: [0.22, 1, 0.36, 1] }}
           >
             <CardFloralDivider className="aesthetic-cover__divider" />
           </motion.div>
@@ -121,21 +121,21 @@ export default function Hero({ isTriggered = false }) {
           {/* STEP 5 (Text): House Name */}
           <motion.h1
             className="aesthetic-cover__home-name"
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 0, y: 12 }}
             animate={isTriggered ? { opacity: 1, y: 0 } : { opacity: 0 }}
-            transition={{ duration: 1.2, delay: 7.0, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.7, delay: 2.9, ease: [0.22, 1, 0.36, 1] }}
           >
             Suvarna nivasa
           </motion.h1>
         </div>
 
-        {/* Centerpiece: Family Photo appears smoothly after home photo softens */}
+        {/* Centerpiece: Family Photo (No names below it on 1st page) */}
         <motion.div
           className="aesthetic-cover__centerpiece"
-          initial={{ opacity: 0, scale: 0.88, y: 28 }}
+          initial={{ opacity: 0, scale: 0.88, y: 20 }}
           animate={isTriggered ? { opacity: 1, scale: 1, y: 0 } : { opacity: 0 }}
-          transition={{ duration: 1.4, delay: 3.2, ease: [0.22, 1, 0.36, 1] }}
-          whileHover={{ y: -4, transition: { duration: 0.3 } }}
+          transition={{ duration: 0.85, delay: 1.2, ease: [0.22, 1, 0.36, 1] }}
+          whileHover={{ y: -3, transition: { duration: 0.25 } }}
         >
           <div className="family-card-frame">
             <div className="family-card-matting">
@@ -149,14 +149,8 @@ export default function Hero({ isTriggered = false }) {
             <span className="corner-bracket corner-bracket--tl" />
             <span className="corner-bracket corner-bracket--br" />
 
-            {/* Family Members' Names & Heartfelt Welcome */}
-            <div className="family-members-showcase">
-              <p className="family-members-names">
-                <strong>Chidanand &amp; Premalata Patil</strong>
-              </p>
-              <p className="family-members-sub">
-                Anjali &middot; Akshay &middot; Anuja
-              </p>
+            <div className="family-card-badge">
+              <span>The Family</span>
             </div>
           </div>
         </motion.div>
@@ -164,9 +158,9 @@ export default function Hero({ isTriggered = false }) {
         {/* Bottom Details & Minimalist Countdown */}
         <motion.div
           className="aesthetic-cover__footer"
-          initial={{ opacity: 0, y: 18 }}
+          initial={{ opacity: 0, y: 12 }}
           animate={isTriggered ? { opacity: 1, y: 0 } : { opacity: 0 }}
-          transition={{ duration: 1.2, delay: 7.8, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.7, delay: 3.3, ease: [0.22, 1, 0.36, 1] }}
         >
           {/* Heartfelt Welcome Sentence */}
           <p className="cover-heartfelt-welcome">

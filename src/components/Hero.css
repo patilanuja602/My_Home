@@ -5,28 +5,30 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 36px 16px 40px;
+  padding: 32px 14px 36px;
   overflow: hidden;
   color: var(--ink-primary);
   text-align: center;
   box-sizing: border-box;
 }
 
-/* Clearly visible house background with light blur and soft overlay */
+/* Entire house fully visible and uncropped on all screen sizes */
 .aesthetic-cover__bg {
   position: absolute;
-  inset: -15px;
+  inset: 0;
   z-index: 1;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .aesthetic-cover__bg-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center 30%;
-  filter: blur(3px) brightness(0.92) contrast(1.02);
-  transform: scale(1.04);
+  object-fit: contain; /* Shows entire house without cropping */
+  object-position: center 25%;
+  transform: scale(1.02);
 }
 
 .aesthetic-cover__bg-overlay {
@@ -34,9 +36,9 @@
   inset: 0;
   background: radial-gradient(
     circle at 50% 35%,
-    rgba(250, 246, 238, 0.72) 0%,
-    rgba(244, 237, 222, 0.88) 65%,
-    rgba(235, 225, 205, 0.95) 100%
+    rgba(250, 246, 238, 0.76) 0%,
+    rgba(244, 237, 222, 0.9) 65%,
+    rgba(235, 225, 205, 0.96) 100%
   );
 }
 
@@ -46,7 +48,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   max-width: 580px;
   width: 100%;
 }
@@ -61,15 +63,15 @@
 }
 
 .aesthetic-cover__ganesha {
-  width: clamp(30px, 8vw, 38px);
-  height: clamp(36px, 9.5vw, 44px);
+  width: clamp(28px, 7.5vw, 36px);
+  height: clamp(34px, 9vw, 42px);
   margin-bottom: 2px;
-  opacity: 0.9;
+  opacity: 0.92;
 }
 
 .aesthetic-cover__invite-text {
   font-family: var(--font-serif);
-  font-size: clamp(0.78rem, 2.8vw, 0.92rem);
+  font-size: clamp(0.76rem, 2.7vw, 0.92rem);
   color: var(--ink-secondary);
   letter-spacing: 0.04em;
   margin: 0;
@@ -86,7 +88,7 @@
 
 .aesthetic-cover__house {
   font-family: var(--font-serif);
-  font-size: clamp(0.74rem, 2.9vw, 1.15rem);
+  font-size: clamp(0.72rem, 2.8vw, 1.15rem);
   letter-spacing: clamp(0.08em, 1.6vw, 0.28em);
   color: var(--ink-secondary);
   font-weight: 500;
@@ -94,7 +96,7 @@
 
 .aesthetic-cover__warming {
   font-family: var(--font-script);
-  font-size: clamp(2.1rem, 8vw, 3.8rem);
+  font-size: clamp(2rem, 7.8vw, 3.8rem);
   color: var(--script-terracotta);
   line-height: 0.85;
   transform: translateY(2px);
@@ -102,20 +104,20 @@
 
 .aesthetic-cover__ceremony {
   font-family: var(--font-serif);
-  font-size: clamp(0.6rem, 2.2vw, 0.78rem);
+  font-size: clamp(0.58rem, 2.1vw, 0.78rem);
   letter-spacing: clamp(0.08em, 1.6vw, 0.26em);
   color: var(--ink-secondary);
   font-weight: 500;
 }
 
 .aesthetic-cover__divider {
-  width: clamp(100px, 28vw, 140px);
-  margin: 2px 0 4px 0;
+  width: clamp(90px, 26vw, 135px);
+  margin: 2px 0 3px 0;
 }
 
 .aesthetic-cover__home-name {
   font-family: var(--font-serif);
-  font-size: clamp(1.8rem, 6.5vw, 2.9rem);
+  font-size: clamp(1.75rem, 6.2vw, 2.85rem);
   font-weight: 500;
   color: var(--sage-title);
   letter-spacing: 0.01em;
@@ -127,7 +129,7 @@
 .aesthetic-cover__centerpiece {
   position: relative;
   width: 100%;
-  max-width: 440px;
+  max-width: 420px;
   margin: 2px 0;
 }
 
@@ -178,31 +180,21 @@
   border-top: none;
 }
 
-/* Family Members Showcase */
-.family-members-showcase {
-  display: flex;
-  flex-direction: column;
+.family-card-badge {
+  display: inline-flex;
   align-items: center;
-  gap: 1px;
+  justify-content: center;
   margin-top: 6px;
-  padding: 4px 12px;
-}
-
-.family-members-names {
-  font-family: var(--font-serif);
-  font-size: clamp(0.88rem, 3.2vw, 1.05rem);
-  color: var(--sage-title);
-  margin: 0;
-  letter-spacing: 0.02em;
-}
-
-.family-members-sub {
+  padding: 3px 14px;
+  background: var(--bg-parchment);
+  border: 1px solid var(--gold-line);
+  border-radius: 999px;
+  color: var(--ink-secondary);
   font-family: var(--font-sans);
-  font-size: clamp(0.72rem, 2.6vw, 0.84rem);
-  color: var(--script-terracotta);
+  font-size: 0.74rem;
   font-weight: 600;
-  letter-spacing: 0.06em;
-  margin: 0;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 /* Footer & Countdown */
@@ -210,16 +202,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   width: 100%;
 }
 
 .cover-heartfelt-welcome {
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: clamp(0.82rem, 2.9vw, 0.96rem);
+  font-size: clamp(0.78rem, 2.7vw, 0.94rem);
   color: var(--ink-secondary);
-  line-height: 1.4;
+  line-height: 1.35;
   margin: 0;
   max-width: 440px;
 }
@@ -227,8 +219,8 @@
 .aesthetic-countdown {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 6px 16px;
+  gap: 8px;
+  padding: 6px 15px;
   background: rgba(255, 255, 255, 0.85);
   border: 1px solid var(--card-border);
   border-radius: 999px;
@@ -244,7 +236,7 @@
 
 .countdown-num {
   font-family: var(--font-serif);
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--sage-title);
   line-height: 1;
@@ -252,7 +244,7 @@
 
 .countdown-txt {
   font-family: var(--font-sans);
-  font-size: 0.6rem;
+  font-size: 0.58rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--ink-faint);
@@ -261,7 +253,7 @@
 
 .countdown-dots {
   font-family: var(--font-serif);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: var(--gold-accent);
   line-height: 1;
 }
@@ -269,9 +261,9 @@
 .aesthetic-scroll-cta {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
   font-family: var(--font-sans);
-  font-size: 0.76rem;
+  font-size: 0.74rem;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -287,7 +279,7 @@
 }
 
 .scroll-down-icon {
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   animation: float-down 1.6s infinite ease-in-out;
 }
 
@@ -298,6 +290,6 @@
 
 @media (max-width: 480px) {
   .aesthetic-cover {
-    padding: 26px 12px 30px;
+    padding: 22px 10px 26px;
   }
 }
