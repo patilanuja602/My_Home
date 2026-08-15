@@ -58,7 +58,7 @@ export default function Hero({ isTriggered = false }) {
           }
           transition={{
             duration: 2.5,
-            delay: 1.6, // Stays 100% clear for 1.6s after intro finishes, then smoothly blurs
+            delay: 1.6,
             ease: [0.4, 0, 0.2, 1],
           }}
         />
@@ -149,19 +149,30 @@ export default function Hero({ isTriggered = false }) {
             <span className="corner-bracket corner-bracket--tl" />
             <span className="corner-bracket corner-bracket--br" />
 
-            <div className="family-card-badge">
-              <span>The Family</span>
+            {/* Family Members' Names & Heartfelt Welcome */}
+            <div className="family-members-showcase">
+              <p className="family-members-names">
+                <strong>Chidanand &amp; Premalata Patil</strong>
+              </p>
+              <p className="family-members-sub">
+                Anjali &middot; Akshay &middot; Anuja
+              </p>
             </div>
           </div>
         </motion.div>
 
-        {/* Bottom Details & Minimalist Countdown: Settles in unhurriedly */}
+        {/* Bottom Details & Minimalist Countdown */}
         <motion.div
           className="aesthetic-cover__footer"
           initial={{ opacity: 0, y: 18 }}
           animate={isTriggered ? { opacity: 1, y: 0 } : { opacity: 0 }}
           transition={{ duration: 1.2, delay: 7.8, ease: [0.22, 1, 0.36, 1] }}
         >
+          {/* Heartfelt Welcome Sentence */}
+          <p className="cover-heartfelt-welcome">
+            With open hearts &amp; joyful smiles, we warmly welcome you to bless our new home.
+          </p>
+
           {/* Live Countdown Pill */}
           <div className="aesthetic-countdown">
             <div className="countdown-item">

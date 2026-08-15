@@ -56,7 +56,7 @@ export default function SiblingsSection() {
               <div className="siblings-card-matting">
                 <img
                   src={siblingsImg}
-                  alt="Siblings of Suvarna Nivasa"
+                  alt="Anjali, Akshay & Anuja Patil"
                   className="siblings-card-img"
                 />
               </div>
@@ -65,7 +65,7 @@ export default function SiblingsSection() {
               <span className="corner-bracket corner-bracket--br" />
 
               <div className="siblings-card-badge">
-                <span>The Siblings</span>
+                <span>Anjali &middot; Akshay &middot; Anuja</span>
               </div>
             </div>
           </motion.div>

@@ -56,7 +56,7 @@ export default function ParentsSection() {
               <div className="parents-card-matting">
                 <img
                   src={parentsImg}
-                  alt="Parents of Suvarna Nivasa"
+                  alt="Chidanand & Premalata Patil"
                   className="parents-card-img"
                 />
               </div>
@@ -65,7 +65,7 @@ export default function ParentsSection() {
               <span className="corner-bracket corner-bracket--br" />
 
               <div className="parents-card-badge">
-                <span>With Love &amp; Blessings</span>
+                <span>Chidanand &amp; Premalata Patil</span>
               </div>
             </div>
           </motion.div>

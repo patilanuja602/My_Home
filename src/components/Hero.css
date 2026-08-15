@@ -5,10 +5,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 40px 16px 45px;
+  padding: 36px 16px 40px;
   overflow: hidden;
   color: var(--ink-primary);
   text-align: center;
+  box-sizing: border-box;
 }
 
 /* Clearly visible house background with light blur and soft overlay */
@@ -24,7 +25,6 @@
   height: 100%;
   object-fit: cover;
   object-position: center 30%;
-  /* Light subtle blur so house is clearly visible */
   filter: blur(3px) brightness(0.92) contrast(1.02);
   transform: scale(1.04);
 }
@@ -46,8 +46,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 14px;
+  gap: 10px;
   max-width: 580px;
+  width: 100%;
 }
 
 /* Header matching the real invitation typography */
@@ -56,18 +57,19 @@
   flex-direction: column;
   align-items: center;
   gap: 2px;
+  width: 100%;
 }
 
 .aesthetic-cover__ganesha {
-  width: 38px;
-  height: 44px;
+  width: clamp(30px, 8vw, 38px);
+  height: clamp(36px, 9.5vw, 44px);
   margin-bottom: 2px;
   opacity: 0.9;
 }
 
 .aesthetic-cover__invite-text {
   font-family: var(--font-serif);
-  font-size: 0.92rem;
+  font-size: clamp(0.78rem, 2.8vw, 0.92rem);
   color: var(--ink-secondary);
   letter-spacing: 0.04em;
   margin: 0;
@@ -77,21 +79,22 @@
   display: flex;
   align-items: baseline;
   justify-content: center;
-  gap: 8px;
+  gap: clamp(4px, 1.8vw, 8px);
   margin: -2px 0 2px 0;
+  width: 100%;
 }
 
 .aesthetic-cover__house {
   font-family: var(--font-serif);
-  font-size: 1.15rem;
-  letter-spacing: 0.28em;
+  font-size: clamp(0.74rem, 2.9vw, 1.15rem);
+  letter-spacing: clamp(0.08em, 1.6vw, 0.28em);
   color: var(--ink-secondary);
   font-weight: 500;
 }
 
 .aesthetic-cover__warming {
   font-family: var(--font-script);
-  font-size: clamp(2.6rem, 8vw, 3.8rem);
+  font-size: clamp(2.1rem, 8vw, 3.8rem);
   color: var(--script-terracotta);
   line-height: 0.85;
   transform: translateY(2px);
@@ -99,20 +102,20 @@
 
 .aesthetic-cover__ceremony {
   font-family: var(--font-serif);
-  font-size: 0.78rem;
-  letter-spacing: 0.26em;
+  font-size: clamp(0.6rem, 2.2vw, 0.78rem);
+  letter-spacing: clamp(0.08em, 1.6vw, 0.26em);
   color: var(--ink-secondary);
   font-weight: 500;
 }
 
 .aesthetic-cover__divider {
-  width: 140px;
+  width: clamp(100px, 28vw, 140px);
   margin: 2px 0 4px 0;
 }
 
 .aesthetic-cover__home-name {
   font-family: var(--font-serif);
-  font-size: clamp(2rem, 6vw, 2.9rem);
+  font-size: clamp(1.8rem, 6.5vw, 2.9rem);
   font-weight: 500;
   color: var(--sage-title);
   letter-spacing: 0.01em;
@@ -124,16 +127,16 @@
 .aesthetic-cover__centerpiece {
   position: relative;
   width: 100%;
-  max-width: 480px;
-  margin: 4px 0;
+  max-width: 440px;
+  margin: 2px 0;
 }
 
 .family-card-frame {
   position: relative;
-  padding: 10px;
+  padding: 8px;
   background: #ffffff;
   border: 1.2px solid var(--card-border);
-  border-radius: 12px;
+  border-radius: 14px;
   box-shadow: 0 18px 45px -10px rgba(70, 52, 30, 0.18), 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
 }
@@ -141,7 +144,7 @@
 .family-card-matting {
   position: relative;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 10px;
   border: 1px solid rgba(197, 160, 89, 0.35);
   background: var(--card-ivory);
 }
@@ -175,21 +178,31 @@
   border-top: none;
 }
 
-.family-card-badge {
-  display: inline-flex;
+/* Family Members Showcase */
+.family-members-showcase {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  margin-top: 8px;
-  padding: 3px 14px;
-  background: var(--bg-parchment);
-  border: 1px solid var(--gold-line);
-  border-radius: 999px;
-  color: var(--ink-secondary);
+  gap: 1px;
+  margin-top: 6px;
+  padding: 4px 12px;
+}
+
+.family-members-names {
+  font-family: var(--font-serif);
+  font-size: clamp(0.88rem, 3.2vw, 1.05rem);
+  color: var(--sage-title);
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.family-members-sub {
   font-family: var(--font-sans);
-  font-size: 0.76rem;
+  font-size: clamp(0.72rem, 2.6vw, 0.84rem);
+  color: var(--script-terracotta);
   font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0;
 }
 
 /* Footer & Countdown */
@@ -197,15 +210,25 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   width: 100%;
+}
+
+.cover-heartfelt-welcome {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(0.82rem, 2.9vw, 0.96rem);
+  color: var(--ink-secondary);
+  line-height: 1.4;
+  margin: 0;
+  max-width: 440px;
 }
 
 .aesthetic-countdown {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 8px 18px;
+  padding: 6px 16px;
   background: rgba(255, 255, 255, 0.85);
   border: 1px solid var(--card-border);
   border-radius: 999px;
@@ -221,7 +244,7 @@
 
 .countdown-num {
   font-family: var(--font-serif);
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: var(--sage-title);
   line-height: 1;
@@ -229,7 +252,7 @@
 
 .countdown-txt {
   font-family: var(--font-sans);
-  font-size: 0.62rem;
+  font-size: 0.6rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--ink-faint);
@@ -238,7 +261,7 @@
 
 .countdown-dots {
   font-family: var(--font-serif);
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: var(--gold-accent);
   line-height: 1;
 }
@@ -248,13 +271,13 @@
   align-items: center;
   gap: 6px;
   font-family: var(--font-sans);
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 600;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--script-terracotta);
   text-decoration: none;
-  margin-top: 2px;
+  margin-top: 1px;
   transition: all 0.2s ease;
 }
 
@@ -264,7 +287,7 @@
 }
 
 .scroll-down-icon {
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   animation: float-down 1.6s infinite ease-in-out;
 }
 
@@ -275,17 +298,6 @@
 
 @media (max-width: 480px) {
   .aesthetic-cover {
-    padding: 30px 12px 35px;
-  }
-  .aesthetic-cover__house {
-    font-size: 0.95rem;
-    letter-spacing: 0.2em;
-  }
-  .aesthetic-cover__ceremony {
-    font-size: 0.68rem;
-    letter-spacing: 0.18em;
-  }
-  .aesthetic-cover__home-name {
-    font-size: 1.9rem;
+    padding: 26px 12px 30px;
   }
 }
