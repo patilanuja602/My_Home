@@ -100,29 +100,17 @@ export default function DigitalCard() {
             <GaneshaMark className="invitation-ganesha-svg" />
           </motion.div>
 
-          {/* STEP 3: Heartfelt Welcome Sentence from First Page */}
+          {/* STEP 3: Heartfelt Welcome Sentence */}
           <motion.p variants={itemFadeUp} className="invitation-lead-text">
             With open hearts &amp; joyful smiles, we warmly welcome you to bless our new home.
           </motion.p>
 
-          {/* STEP 4: Title: HOUSE Warming CEREMONY */}
-          <motion.div variants={itemFadeUp} className="invitation-title-group">
-            <span className="title-house">HOUSE</span>
-            <span className="title-warming">Warming</span>
-            <span className="title-ceremony">CEREMONY</span>
-          </motion.div>
-
-          {/* STEP 5: Floral Divider */}
+          {/* STEP 4: Floral Divider */}
           <motion.div variants={itemFadeUp} className="invitation-divider-wrap">
             <CardFloralDivider className="invitation-divider-svg" />
           </motion.div>
 
-          {/* STEP 6: House Name: Suvarna nivasa */}
-          <motion.h2 variants={itemFadeUp} className="invitation-house-name">
-            Suvarna nivasa
-          </motion.h2>
-
-          {/* STEP 7: 3-Column Info Block (Date, Place, Time) */}
+          {/* STEP 5: 3-Column Info Block (Date, Place, Time) */}
           <motion.div variants={itemFadeUp} className="invitation-info-grid">
             {/* Column 1: DATE */}
             <div className="info-column">

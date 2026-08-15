@@ -112,73 +112,25 @@
 .invitation-lead-text {
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: clamp(0.82rem, 2.7vw, 0.96rem);
+  font-size: clamp(0.92rem, 3.2vw, 1.12rem);
   color: var(--ink-secondary);
-  line-height: 1.35;
-  letter-spacing: 0.02em;
-  margin: 2px 0 2px 0;
-  max-width: 460px;
+  line-height: 1.45;
+  letter-spacing: 0.01em;
+  margin: 4px 0 6px 0;
+  max-width: 480px;
 }
 
-/* STEP 4: Title */
-.invitation-title-group {
-  display: flex;
-  align-items: baseline;
-  justify-content: center;
-  gap: 7px;
-  margin: 0 0 2px 0;
-}
-
-.title-house {
-  font-family: var(--font-serif);
-  font-size: 1.15rem;
-  letter-spacing: 0.26em;
-  color: var(--ink-secondary);
-  font-weight: 500;
-}
-
-.title-warming {
-  font-family: var(--font-script);
-  font-size: clamp(2.6rem, 8vw, 3.8rem);
-  color: var(--script-terracotta);
-  line-height: 0.85;
-  transform: translateY(2px);
-  background: linear-gradient(135deg, #7a3a24 0%, #a8583c 50%, #7a3a24 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
-  filter: drop-shadow(0 1px 2px rgba(140, 73, 50, 0.15));
-}
-
-.title-ceremony {
-  font-family: var(--font-serif);
-  font-size: 0.78rem;
-  letter-spacing: 0.24em;
-  color: var(--ink-secondary);
-  font-weight: 500;
-}
-
-/* STEP 5: Floral Divider */
+/* STEP 4: Floral Divider */
 .invitation-divider-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 8px;
 }
 
 .invitation-divider-svg {
-  width: 130px;
-  margin: 2px 0 4px 0;
-}
-
-/* STEP 6: House Name */
-.invitation-house-name {
-  font-family: var(--font-serif);
-  font-size: clamp(2.1rem, 6.5vw, 3.2rem);
-  font-weight: 500;
-  color: var(--sage-title);
-  letter-spacing: -0.01em;
-  margin: 0 0 8px 0;
-  line-height: 1;
+  width: 140px;
+  margin: 0;
 }
 
 /* STEP 7: 3-Column Info Block */
