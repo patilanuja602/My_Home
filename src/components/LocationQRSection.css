@@ -1,0 +1,264 @@
+.location-qr-section {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 16px 50px;
+  background: radial-gradient(circle at 50% 35%, #faf7f0 0%, #f0e7d6 65%, #e8ddc7 100%);
+  color: var(--ink-primary);
+  overflow: hidden;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.location-qr-section__bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.4) 0%, transparent 80%);
+  pointer-events: none;
+}
+
+.location-qr-container {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 540px;
+}
+
+.location-qr-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+}
+
+/* STEP 1: Header Block */
+.location-header-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.location-pin-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 14px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--gold-line);
+  border-radius: 999px;
+  color: var(--gold-dark);
+  font-family: var(--font-sans);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.location-pin-icon {
+  width: 14px;
+  height: 14px;
+  color: var(--gold-dark);
+}
+
+.location-main-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 5.5vw, 2.5rem);
+  color: var(--sage-title);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin: 2px 0 0 0;
+}
+
+.location-divider-svg {
+  width: 130px;
+  margin: 2px 0 4px 0;
+}
+
+/* STEP 2: QR Code Frame */
+.qr-card-showcase {
+  position: relative;
+  margin: 4px 0;
+}
+
+.qr-frame {
+  position: relative;
+  padding: 14px;
+  background: #ffffff;
+  border: 1.2px solid var(--card-border);
+  border-radius: 16px;
+  box-shadow: 
+    0 18px 45px -10px rgba(70, 52, 30, 0.18),
+    0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.qr-image-matting {
+  position: relative;
+  padding: 8px;
+  background: var(--card-ivory);
+  border-radius: 10px;
+  border: 1px solid rgba(197, 160, 89, 0.35);
+}
+
+.qr-code-img {
+  width: 190px;
+  height: 190px;
+  display: block;
+}
+
+.qr-placeholder {
+  width: 190px;
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--ink-faint);
+}
+
+.qr-scan-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  padding: 4px 16px;
+  background: var(--bg-parchment);
+  border: 1px solid var(--gold-line);
+  border-radius: 999px;
+  color: var(--ink-secondary);
+  font-family: var(--font-sans);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* STEP 3: Address Details */
+.location-address-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 18px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(197, 160, 89, 0.35);
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  width: 100%;
+  max-width: 440px;
+  box-sizing: border-box;
+}
+
+.address-highlight {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--ink-primary);
+  margin: 0;
+}
+
+.address-full {
+  font-family: var(--font-serif);
+  font-style: normal;
+  font-size: 0.88rem;
+  color: var(--ink-secondary);
+  line-height: 1.35;
+  margin: 0;
+}
+
+.scan-instructions {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  color: var(--ink-faint);
+  margin: 4px 0 0 0;
+}
+
+/* STEP 4: Direct Navigation Button */
+.location-action-wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2px;
+}
+
+.location-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: var(--sage-title);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  font-weight: 600;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 6px 20px -4px rgba(34, 56, 40, 0.35);
+  transition: all 0.25s ease;
+}
+
+.location-nav-btn:hover {
+  background: #18281d;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px -4px rgba(34, 56, 40, 0.45);
+}
+
+.location-nav-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* STEP 5: Closing Footer */
+.location-closing-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  margin-top: 10px;
+}
+
+.closing-mantra {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  color: var(--gold-dark);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  margin: 0;
+}
+
+.closing-copy {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--ink-faint);
+  margin: 0;
+}
+
+@media (max-width: 480px) {
+  .location-qr-section {
+    padding: 30px 12px 35px;
+  }
+  .qr-code-img, .qr-placeholder {
+    width: 160px;
+    height: 160px;
+  }
+  .address-highlight {
+    font-size: 0.95rem;
+  }
+  .address-full {
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,13 @@
+.site {
+  min-height: 100svh;
+  opacity: 0;
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.site--visible {
+  opacity: 1;
+}
+
+.site--hidden {
+  pointer-events: none;
+}

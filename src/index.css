@@ -1,0 +1,94 @@
+:root {
+  /* ---- Aesthetic Palette Drawn Directly from the Real Invitation Card ---- */
+  --bg-parchment: #f6f1e5;
+  --card-ivory: #faf7f0;
+  --card-border: #dcd0bc;
+  
+  --sage-title: #223828;
+  --sage-leaf-dark: #3f5437;
+  --sage-leaf-med: #5a734e;
+  --sage-leaf-light: #7d9670;
+
+  --script-terracotta: #8c4932;
+  --script-copper: #9b533a;
+  
+  --gold-accent: #c5a059;
+  --gold-line: rgba(197, 160, 89, 0.55);
+  --gold-dark: #8c6d32;
+
+  --ink-primary: #2d261e;
+  --ink-secondary: #574b3f;
+  --ink-faint: #857768;
+
+  --font-script: "Great Vibes", "Alex Brush", cursive;
+  --font-serif: "Bodoni Moda", "Playfair Display", "Georgia", serif;
+  --font-sans: "Plus Jakarta Sans", "Montserrat", sans-serif;
+
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-parchment);
+  color: var(--ink-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+#root {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Elegant Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-parchment);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gold-accent);
+  border-radius: 3px;
+}
+
+p, h1, h2, h3, h4 {
+  margin: 0;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (min-width: 900px) {
+  .container {
+    max-width: 860px;
+    padding: 0 32px;
+  }
+}

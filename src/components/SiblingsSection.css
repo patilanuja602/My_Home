@@ -1,0 +1,137 @@
+.siblings-section {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 16px 45px;
+  background: radial-gradient(circle at 50% 35%, #f9f5ec 0%, #f0e7d6 65%, #e8ddc7 100%);
+  color: var(--ink-primary);
+  overflow: hidden;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.siblings-section__bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.4) 0%, transparent 80%);
+  pointer-events: none;
+}
+
+.siblings-section__container {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 540px;
+}
+
+.siblings-main-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+/* STEP 1: Siblings Photo Frame */
+.siblings-photo-showcase {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  margin: 0 0 6px 0;
+}
+
+.siblings-card-frame {
+  position: relative;
+  padding: 10px;
+  background: #ffffff;
+  border: 1.2px solid var(--card-border);
+  border-radius: 14px;
+  box-shadow: 
+    0 18px 45px -10px rgba(70, 52, 30, 0.18),
+    0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.siblings-card-matting {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid rgba(197, 160, 89, 0.35);
+  background: var(--card-ivory);
+}
+
+.siblings-card-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: contrast(1.02) saturate(1.03);
+}
+
+.siblings-card-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+  padding: 3px 16px;
+  background: var(--bg-parchment);
+  border: 1px solid var(--gold-line);
+  border-radius: 999px;
+  color: var(--ink-secondary);
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* STEP 2: Quote Heading */
+.siblings-quote-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.25rem, 4.5vw, 1.65rem);
+  color: var(--sage-title);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 4px 0 0 0;
+  line-height: 1.2;
+}
+
+.siblings-divider-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.siblings-divider-svg {
+  width: 130px;
+  margin: 2px 0 4px 0;
+}
+
+/* STEP 3: Quote Body */
+.siblings-quote-body {
+  font-family: var(--font-serif);
+  font-size: clamp(1.02rem, 3.6vw, 1.22rem);
+  line-height: 1.65;
+  color: var(--ink-secondary);
+  font-style: italic;
+  margin: 0;
+  max-width: 480px;
+}
+
+@media (max-width: 480px) {
+  .siblings-section {
+    padding: 30px 12px 35px;
+  }
+  .siblings-photo-showcase {
+    max-width: 340px;
+  }
+  .siblings-quote-body {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}

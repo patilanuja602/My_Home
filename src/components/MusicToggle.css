@@ -1,0 +1,50 @@
+.aesthetic-music-btn {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  z-index: 1000;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: rgba(250, 246, 237, 0.92);
+  border: 1.2px solid var(--card-border);
+  border-radius: 999px;
+  color: var(--sage-title);
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  box-shadow: 0 8px 24px -6px rgba(70, 52, 30, 0.15);
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all 0.25s ease;
+}
+
+.aesthetic-music-btn:hover {
+  background: #ffffff;
+  border-color: var(--gold-accent);
+  color: var(--ink-primary);
+  box-shadow: 0 10px 28px -6px rgba(70, 52, 30, 0.22);
+}
+
+.aesthetic-music-btn--playing {
+  background: var(--sage-title);
+  color: #ffffff;
+  border-color: var(--sage-title);
+  box-shadow: 0 8px 24px -4px rgba(34, 56, 40, 0.35);
+}
+
+.music-icon {
+  font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+  .aesthetic-music-btn {
+    bottom: 16px;
+    right: 16px;
+    padding: 8px 14px;
+    font-size: 0.76rem;
+  }
+}

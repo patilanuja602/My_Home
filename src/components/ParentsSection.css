@@ -1,0 +1,164 @@
+.parents-section {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 16px 45px;
+  background: radial-gradient(circle at 50% 35%, #faf6ee 0%, #f2e9d8 65%, #e9dec9 100%);
+  color: var(--ink-primary);
+  overflow: hidden;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.parents-section__bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.4) 0%, transparent 80%);
+  pointer-events: none;
+}
+
+.parents-section__container {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 540px;
+}
+
+.parents-main-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+/* STEP 1: Parents Photo Frame */
+.parents-photo-showcase {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  margin: 0 0 6px 0;
+}
+
+.parents-card-frame {
+  position: relative;
+  padding: 10px;
+  background: #ffffff;
+  border: 1.2px solid var(--card-border);
+  border-radius: 14px;
+  box-shadow: 
+    0 18px 45px -10px rgba(70, 52, 30, 0.18),
+    0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.parents-card-matting {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid rgba(197, 160, 89, 0.35);
+  background: var(--card-ivory);
+}
+
+.parents-card-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: contrast(1.02) saturate(1.03);
+}
+
+.parents-card-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+  padding: 3px 16px;
+  background: var(--bg-parchment);
+  border: 1px solid var(--gold-line);
+  border-radius: 999px;
+  color: var(--ink-secondary);
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* STEP 2: Quote Text */
+.parents-quote-lead {
+  font-family: var(--font-serif);
+  font-size: clamp(1.05rem, 3.8vw, 1.28rem);
+  line-height: 1.6;
+  color: var(--ink-secondary);
+  font-style: italic;
+  margin: 4px 0 0 0;
+  max-width: 480px;
+}
+
+.parents-divider-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parents-divider-svg {
+  width: 130px;
+  margin: 2px 0 4px 0;
+}
+
+.parents-invite-sub {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  color: var(--ink-secondary);
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+.parents-main-title {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 8px;
+  margin: 0;
+  line-height: 1;
+}
+
+.parents-title-house {
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 5vw, 1.9rem);
+  font-weight: 600;
+  color: #a86c2e;
+}
+
+.parents-title-warming {
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 5vw, 1.9rem);
+  font-weight: 600;
+  color: #a86c2e;
+}
+
+.parents-title-ceremony {
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 5vw, 1.9rem);
+  font-weight: 600;
+  color: #a86c2e;
+}
+
+@media (max-width: 480px) {
+  .parents-section {
+    padding: 30px 12px 35px;
+  }
+  .parents-photo-showcase {
+    max-width: 320px;
+  }
+  .parents-quote-lead {
+    font-size: 0.98rem;
+    line-height: 1.5;
+  }
+}

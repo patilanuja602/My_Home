@@ -1,0 +1,365 @@
+.fullscreen-invitation {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 16px 36px;
+  background: radial-gradient(circle at 50% 35%, #f9f5ec 0%, #f0e7d6 65%, #e8ddc7 100%);
+  color: var(--ink-primary);
+  overflow: hidden;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.fullscreen-invitation__bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.4) 0%, transparent 80%);
+  pointer-events: none;
+}
+
+/* Corner Sage Foliage Sprays */
+.invitation-spray {
+  position: absolute;
+  top: 0;
+  pointer-events: none;
+  z-index: 2;
+  transform-origin: top center;
+}
+
+.invitation-spray--tl {
+  left: 0;
+}
+
+.invitation-spray--tr {
+  right: 0;
+}
+
+.invitation-spray-svg {
+  width: clamp(100px, 18vw, 150px);
+  height: auto;
+}
+
+.fullscreen-invitation__container {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+.invitation-main-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+/* STEP 1: House Artwork Centerpiece */
+.invitation-house-showcase {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+  margin: 0 0 6px 0;
+}
+
+.invitation-house-frame {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 
+    0 16px 38px -10px rgba(70, 52, 30, 0.18),
+    0 4px 12px rgba(0, 0, 0, 0.04);
+  border: 1.2px solid rgba(197, 160, 89, 0.4);
+  background: #ffffff;
+}
+
+.invitation-house-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* STEP 2: Ganesha Mark */
+.invitation-ganesha-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+.invitation-ganesha-svg {
+  width: 32px;
+  height: 38px;
+  opacity: 0.95;
+}
+
+/* STEP 3: Sub-heading */
+.invitation-lead-text {
+  font-family: var(--font-serif);
+  font-size: 0.92rem;
+  color: var(--ink-secondary);
+  letter-spacing: 0.03em;
+  margin: 0;
+}
+
+/* STEP 4: Title */
+.invitation-title-group {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 7px;
+  margin: 0 0 2px 0;
+}
+
+.title-house {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  letter-spacing: 0.26em;
+  color: var(--ink-secondary);
+  font-weight: 500;
+}
+
+.title-warming {
+  font-family: var(--font-script);
+  font-size: clamp(2.6rem, 8vw, 3.8rem);
+  color: var(--script-terracotta);
+  line-height: 0.85;
+  transform: translateY(2px);
+  background: linear-gradient(135deg, #7a3a24 0%, #a8583c 50%, #7a3a24 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  filter: drop-shadow(0 1px 2px rgba(140, 73, 50, 0.15));
+}
+
+.title-ceremony {
+  font-family: var(--font-serif);
+  font-size: 0.78rem;
+  letter-spacing: 0.24em;
+  color: var(--ink-secondary);
+  font-weight: 500;
+}
+
+/* STEP 5: Floral Divider */
+.invitation-divider-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.invitation-divider-svg {
+  width: 130px;
+  margin: 2px 0 4px 0;
+}
+
+/* STEP 6: House Name */
+.invitation-house-name {
+  font-family: var(--font-serif);
+  font-size: clamp(2.1rem, 6.5vw, 3.2rem);
+  font-weight: 500;
+  color: var(--sage-title);
+  letter-spacing: -0.01em;
+  margin: 0 0 8px 0;
+  line-height: 1;
+}
+
+/* STEP 7: 3-Column Info Block */
+.invitation-info-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1.35fr auto 1fr;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(197, 160, 89, 0.35);
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  margin: 2px 0 6px 0;
+}
+
+.info-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2px;
+}
+
+.info-header {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 2px;
+}
+
+.info-icon {
+  width: 15px;
+  height: 15px;
+  color: var(--gold-dark);
+}
+
+.info-tag {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  font-weight: 700;
+}
+
+.info-primary {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--ink-primary);
+  line-height: 1.1;
+}
+
+.info-secondary {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  color: var(--ink-faint);
+}
+
+.info-address-text {
+  font-family: var(--font-serif);
+  font-style: normal;
+  font-size: 0.88rem;
+  line-height: 1.35;
+  color: var(--ink-secondary);
+}
+
+.info-divider-line {
+  width: 1px;
+  height: 44px;
+  background: var(--gold-line);
+  opacity: 0.5;
+}
+
+/* STEP 8: Bottom Quote & Corner Illustrations */
+.invitation-bottom-wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 4px;
+}
+
+.invitation-separator-line {
+  width: 140px;
+  height: 1px;
+  background: var(--gold-line);
+  margin: 4px 0 6px 0;
+}
+
+.invitation-quote-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 0 54px;
+  box-sizing: border-box;
+}
+
+.invitation-quote-text {
+  font-family: var(--font-script);
+  font-size: clamp(1.45rem, 4.6vw, 1.95rem);
+  color: var(--script-terracotta);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.invitation-heart {
+  font-size: 0.82rem;
+  color: var(--gold-dark);
+  opacity: 0.85;
+  display: inline-block;
+}
+
+.invitation-corner-decor {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.corner-decor {
+  position: absolute;
+  bottom: -4px;
+}
+
+.corner-decor--left {
+  left: 0;
+}
+
+.corner-decor--right {
+  right: 0;
+}
+
+.corner-decor-svg {
+  width: 48px;
+  height: 64px;
+}
+
+.invitation-footer-copy {
+  font-family: var(--font-sans);
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  color: var(--ink-faint);
+  text-align: center;
+  margin-top: 14px;
+  opacity: 0.8;
+}
+
+/* Mobile-First Proportions (360px - 440px) */
+@media (max-width: 480px) {
+  .fullscreen-invitation {
+    padding: 30px 10px 24px;
+  }
+  .invitation-main-flow {
+    gap: 6px;
+  }
+  .title-house {
+    font-size: 0.95rem;
+    letter-spacing: 0.2em;
+  }
+  .title-ceremony {
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+  }
+  .invitation-house-name {
+    font-size: 1.9rem;
+    margin-bottom: 4px;
+  }
+  .invitation-info-grid {
+    padding: 8px 10px;
+    margin-bottom: 4px;
+  }
+  .info-primary {
+    font-size: 0.98rem;
+  }
+  .info-address-text {
+    font-size: 0.78rem;
+    line-height: 1.25;
+  }
+  .info-tag {
+    font-size: 0.64rem;
+  }
+  .invitation-quote-block {
+    padding: 0 42px;
+  }
+  .invitation-quote-text {
+    font-size: 1.35rem;
+  }
+  .corner-decor-svg {
+    width: 38px;
+    height: 52px;
+  }
+}
